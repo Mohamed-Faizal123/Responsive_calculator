@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calculatorApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Calculator App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="CalculatorController">
+
+  <div class="calculator">
+    <input type="text" class="calculator-display" ng-model="display" disabled />
+
+    <div class="calculator-buttons">
+      <!-- Row 1: Numbers and Operators -->
+      <button ng-click="clear()">C</button>
+      <button ng-click="delete()">DEL</button>
+      <button ng-click="percentage()">%</button>
+      <button ng-click="appendOperator('/')">/</button>
+      <button ng-click="appendOperator('*')">*</button>
+
+      <!-- Row 2 -->
+      <button ng-click="appendNumber(7)">7</button>
+      <button ng-click="appendNumber(8)">8</button>
+      <button ng-click="appendNumber(9)">9</button>
+      <button ng-click="appendOperator('-')">-</button>
+
+      <!-- Row 3 -->
+      <button ng-click="appendNumber(4)">4</button>
+      <button ng-click="appendNumber(5)">5</button>
+      <button ng-click="appendNumber(6)">6</button>
+      <button ng-click="appendOperator('+')">+</button>
+
+      <!-- Row 4 -->
+      <button ng-click="appendNumber(1)">1</button>
+      <button ng-click="appendNumber(2)">2</button>
+      <button ng-click="appendNumber(3)">3</button>
+      <button class="equals" ng-click="calculate()">=</button>
+
+      <!-- Row 5 -->
+      <button ng-click="appendNumber(0)">0</button>
+      <button ng-click="appendNumber('.')">.</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
